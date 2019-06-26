@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../../skin/houtai/base.css" rel="stylesheet">
+<script src="../../skin/houtai/jquery-1.8.3.min.js"></script>
+<script src="../../skin/houtai/main.js"></script>
+<script src="../../skin/menhu/js/end-menu.js"></script>
+<title>
+增加信息</title>
+<script src="http://menhu.yangqq.com/e/data/js/ajax.js"></script>
+<SCRIPT lanuage="JScript">
+function DisplayImg(ss,imgname,phome)
+{
+	if(imgname=="menumemberimg")
+	{
+		img=todisplay(domenumember,phome);
+		document.images.menumemberimg.src=img;
+	}
+	else if(imgname=="menumsgimg")
+	{
+		img=todisplay(domenumsg,phome);
+		document.images.menumsgimg.src=img;
+	}
+	else if(imgname=="menuinfoimg")
+	{
+		img=todisplay(domenuinfo,phome);
+		document.images.menuinfoimg.src=img;
+	}
+	else if(imgname=="menuspaceimg")
+	{
+		img=todisplay(domenuspace,phome);
+		document.images.menuspaceimg.src=img;
+	}
+	else if(imgname=="menupayimg")
+	{
+		img=todisplay(domenupay,phome);
+		document.images.menupayimg.src=img;
+	}
+	else if(imgname=="menushopimg")
+	{
+		img=todisplay(domenushop,phome);
+		document.images.menushopimg.src=img;
+	}
+	else
+	{
+	}
+	DisplayAllMenu(imgname);
+}
+function todisplay(ss,phome)
+{
+	if(ss.style.display=="") 
+	{
+  		ss.style.display="none";
+		theimg="/skin/member/images/add.gif";
+	}
+	else
+	{
+  		ss.style.display="";
+		theimg="/skin/member/images/noadd.gif";
+	}
+	return theimg;
+}
+function turnit(ss,img)
+{
+	DisplayImg(ss,img,0);
+}
+function DisplayAllMenu(imgname)
+{
+	if(imgname!='menumemberimg'&&domenumember.style.display=="")
+	{
+		domenumember.style.display="none";
+		document.images.menumemberimg.src="/skin/member/images/add.gif";
+	}
+	if(imgname!='menumsgimg'&&domenumsg.style.display=="")
+	{
+		domenumsg.style.display="none";
+		document.images.menumsgimg.src="/skin/member/images/add.gif";
+	}
+	if(imgname!='menuinfoimg'&&domenuinfo.style.display=="")
+	{
+		domenuinfo.style.display="none";
+		document.images.menuinfoimg.src="/skin/member/images/add.gif";
+	}
+	if(imgname!='menuspaceimg'&&domenuspace.style.display=="")
+	{
+		domenuspace.style.display="none";
+		document.images.menuspaceimg.src="/skin/member/images/add.gif";
+	}
+	if(imgname!='menupayimg'&&domenupay.style.display=="")
+	{
+		domenupay.style.display="none";
+		document.images.menupayimg.src="/skin/member/images/add.gif";
+	}
+	if(imgname!='menushopimg'&&domenushop.style.display=="")
+	{
+		domenushop.style.display="none";
+		document.images.menushopimg.src="/skin/member/images/add.gif";
+	}
+}
+</SCRIPT>
+</head>
+<body>
+<div class="header-wrapper">
+
+<h1>会员中心</h1>
+           <div class="header-hello">您好，<span class="header-username">游客</span><span class="header-groupname"></span>
+      </div><div class="header-msg"><p>[ <a href="../member/login/index.html">马上登录</a> | <a href="../member/register/index.php-tobind=0&amp;groupid=1.html">注册帐号</a> ]</p></div>
+          <div class="header-kjurl"><a href="../../index.html">网站首页</a><!-- | <a href="/e/member/cp/">会员中心</a> | <a href="/e/member/list/">会员列表</a>--></div>
+     
+      </div>
+
+    <p class="place">当前位置：<a href='../../index.html'>首页</a>&nbsp;>&nbsp;<a href='../member/cp/index.html'>会员中心</a>&nbsp;>&nbsp;<a href='ListInfo.php-mid=11.html'>管理信息</a>&nbsp;>&nbsp;增加信息&nbsp;(商城)</p>
+
+    
+<div class="sidebar">
+  <div class="main-menu" id="domenumemberid" onMouseUp="turnit(domenumember,'menumemberimg');" style="CURSOR: hand" title="展开/收缩"><span class="iconfont icon-yonghu"></span>帐号</div>
+  <ul id="domenumember" style="display:none" class="menu-list">
+    <li><a href="../member/login/index.html">会员登录</a></li>
+    <li><a href="../member/register/index.php-tobind=0&amp;groupid=1.html">注册帐号</a></li>
+  </ul>
+  <ul id="domenumsg" style="display:none" class="menu-list">
+  </ul>
+  <div class="main-menu" id="domenuinfoid" onMouseUp="turnit(domenuinfo,'menuinfoimg');" style="CURSOR: hand" title="展开/收缩"><span class="iconfont icon-gaojian"></span>投稿</div>
+  <ul id="domenuinfo" style="display:none" class="menu-list">
+        <li><a href="ChangeClass.php-mid=1.html">
+            发布
+      新闻            </a></li>
+        <li><a href="ChangeClass.php-mid=10.html">
+            发布
+      图片            </a></li>
+        <li><a href="ChangeClass.php-mid=11.html">
+            发布
+      商城            </a></li>
+      </ul>
+    <ul id="domenuspace" style="display:none" class="menu-list">
+  
+    </ul>
+  
+  <ul id="domenupay" style="display:none" class="menu-list">
+  </ul>
+<!--  <div class="main-menu" id="domenushopid" onMouseUp="turnit(domenushop,'menushopimg');" style="CURSOR: hand" title="展开/收缩"><span class="iconfont icon-shangchengkuaizhuang
+"></span> 商城 
+  </div>
+  <ul id="domenushop" style="display:none" class="menu-list">
+    <li><a href="#ecms" onclick="window.open('/e/ShopSys/buycar/','','width=680,height=500,scrollbars=yes,resizable=yes');">我的购物车</a> </li>
+  </ul>-->
+    
+</div>
+
+<script>
+function CheckChangeClass()
+{
+	if(document.changeclass.classid.value==0||document.changeclass.classid.value=='')
+	{
+		alert("请选择栏目");
+		return false;
+	}
+	return true;
+}
+</script>
+
+<div class="xztg">
+  <h2>请选择要增加信息的栏目</h2>
+  <form action="AddInfo.php.html" method="get" name="changeclass" id="changeclass" onsubmit="return CheckChangeClass();">
+    <input name="mid" type="hidden" id="mid" value="11">
+    <input name="enews" type="hidden" id="enews" value="MAddInfo">
+    <select name=classid size="10" style="width:300px">
+      <script src="http://menhu.yangqq.com/d/js/js/addinfo11.js"></script>
+    </select>
+    <input type="submit" name="Submit" value="添加信息" class="btn-tjxx">
+  </form>
+</div>
+<div class="clear blank60"></div>
+    <div class="footer">Powered by <strong><a href="https://www.yangqq.com" target="_blank">青于蓝</a> </strong>Copyright &#169; www.yangqq.com All Rights Reserved.</div>
+<script>turnit(domenuinfo,"menuinfoimg");</script><script>
+	domenuinfo.style.display="";
+	document.images.menuinfoimg.src="/skin/member/images/noadd.gif";
+	</script>
+<div class="end-menu">
+  <ul>
+    <li><a href="../../index.html"><i class="iconfont icon-shouye"></i>首页</a></li>
+    <li><a href="../../phone-fenlei.html"><i class="iconfont icon-fenlei"></i>分类</a></li>
+    <li><a href="../../phone-list.html"><i class="iconfont icon-nav-icon-wzgl"></i>所有</a></li>
+    <li><a href="../member/my/index.html"><i class="iconfont icon-My"></i>我的</a></li>
+  </ul>
+</div>
+<a href="#" title="返回顶部" class="icon-top"></a>
+</body>
+</html>
